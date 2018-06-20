@@ -12,6 +12,8 @@ if (!isset($_SESSION['companyId']) || !isset($_SESSION['phone'])
     || empty(trim($_SESSION['companyId'])) || empty(trim($_SESSION['phone']))) {
     echo "<script>alert('Please login first!');window.location.replace('login.php');</script>";
 } else {
+//    echo $_SESSION['companyId'] . "<br>";
+//    echo $_SESSION['phone'];
     ?>
     <html>
     <head>

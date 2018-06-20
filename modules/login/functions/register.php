@@ -353,7 +353,7 @@
                         companyAddressLine1, companyAddressLine2, companyCountry, companyPassword,
                         companyReTypePassword]);
 
-                    console.log(companyDetails);
+//                    console.log(companyDetails);
 
                     $.ajax({
                         url: 'check_register.php',

@@ -27,8 +27,9 @@ class Register
 
         $result = $this->connection->query($sql);
 
+//        print_r($result);
         if ($result->num_rows > 0) {
-            return true;
+            return $result;
         } else {
             return false;
         }

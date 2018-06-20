@@ -27,12 +27,14 @@ if (isset($_REQUEST['phoneNumber']) && !empty(trim($_REQUEST['phoneNumber']))
 
     $checkLogin = $login->checkLogin($phone, $passwd);
 
-    if ($checkLogin == true) {
-        $companyId = 0;
+    if ($checkLogin === true) {
         $register = new Register($dbConnect->getInstance());
         $companyId = $register->getCompanyDetails($phone, 0);
-        if ($companyId > 0 && $companyId != null) {
-            $login->createSession($companyId, $phone);
+        if ($companyId != false && $companyId != null) {
+            while ($array = $companyId->fetch_assoc()) {
+//                echo $array['company_id'];
+                $login->createSession($array['company_id'], $phone);
+            }
 //            echo "<script>window.location.replace('dashboard.php');</script>";
             new PrintJson(Constants::STATUS_SUCCESS, "Successful Login");
         } else {
