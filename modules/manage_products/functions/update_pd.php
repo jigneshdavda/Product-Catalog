@@ -10,7 +10,7 @@ require_once("../../../classes/DBConnect.php");
 require_once("../../../classes/Constants.php");
 require_once("../../../classes/PrintJson.php");
 require_once("../classes/ProductsDetails.php");
-include("../../sessions/session.php");
+//include("../../sessions/session.php");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_USERNAME,
@@ -24,7 +24,8 @@ if (isset($_REQUEST['updateProductDetails'])) {
         $updateProductDetails = $productDetails->updateProductDetails($updateDetails[0],
             $updateDetails[1], $updateDetails[2], $updateDetails[3], $updateDetails[4],
             $updateDetails[5], $updateDetails[6], $updateDetails[7], $updateDetails[8],
-            $updateDetails[9], $updateDetails[10], $_SESSION['companyId']);
+//            $updateDetails[9], $updateDetails[10], $_SESSION['companyId']);
+            $updateDetails[9], $updateDetails[10], 1);
 
         if ($updateProductDetails === true) {
             new PrintJson(Constants::STATUS_SUCCESS, "Successfully updated");

@@ -15,7 +15,7 @@ require_once("../classes/ProductBrandWarranty.php");
 require_once("../classes/ProductCategory.php");
 require_once("../classes/ProductCondition.php");
 require_once("../classes/ProductsDetails.php");
-include("../../sessions/session.php");
+//include("../../sessions/session.php");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_USERNAME,
@@ -24,16 +24,20 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 
 if (isset($_REQUEST['productDetailsId']) && !empty(trim($_REQUEST['productDetailsId']))) {
 $productDetails = new ProductsDetails($dbConnect->getInstance());
-$getProductDetails = $productDetails->getProductDetails(0, 0, $_REQUEST['productDetailsId'], $_SESSION['companyId']);
+//$getProductDetails = $productDetails->getProductDetails(0, 0, $_REQUEST['productDetailsId'], $_SESSION['companyId']);
+$getProductDetails = $productDetails->getProductDetails(0, 0, $_REQUEST['productDetailsId'], 1);
 
 $boxType = new ProductBoxType($dbConnect->getInstance());
-$getBoxType = $boxType->getProductBoxType($_SESSION['companyId']);
+//$getBoxType = $boxType->getProductBoxType($_SESSION['companyId']);
+$getBoxType = $boxType->getProductBoxType(1);
 
 $brandWarranty = new ProductBrandWarranty($dbConnect->getInstance());
-$getBrandWarranty = $brandWarranty->getProductBrandWarranty($_SESSION['companyId']);
+//$getBrandWarranty = $brandWarranty->getProductBrandWarranty($_SESSION['companyId']);
+$getBrandWarranty = $brandWarranty->getProductBrandWarranty(1);
 
 $condition = new ProductCondition($dbConnect->getInstance());
-$getCondition = $condition->getProductCondition($_SESSION['companyId']);
+//$getCondition = $condition->getProductCondition($_SESSION['companyId']);
+$getCondition = $condition->getProductCondition(1);
 if ($getProductDetails != false) {
 ?>
 <html>

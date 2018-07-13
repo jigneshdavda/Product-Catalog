@@ -10,7 +10,7 @@ require_once("../../../classes/DBConnect.php");
 require_once("../../../classes/Constants.php");
 require_once("../../../classes/PrintJson.php");
 require_once("../classes/ProductsDetails.php");
-include("../../sessions/session.php");
+//include("../../sessions/session.php");
 header("Content-Type: application/json");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
@@ -28,7 +28,8 @@ if (isset($_REQUEST['productDetailsArray']) && !empty($_REQUEST['productDetailsA
             $productDetailsArray[1], $productDetailsArray[2], $productDetailsArray[3],
             $productDetailsArray[4], $productDetailsArray[5], $productDetailsArray[6],
             $productDetailsArray[7], $productDetailsArray[8], $productDetailsArray[9],
-            $productDetailsArray[10], $productDetailsArray[11], $_SESSION['companyId']);
+//            $productDetailsArray[10], $productDetailsArray[11], $_SESSION['companyId']);
+            $productDetailsArray[10], $productDetailsArray[11], 1);
 
         if ($insertProductDetails === true) {
             $checkVariable = true;

@@ -11,7 +11,7 @@ require_once("../../../classes/Constants.php");
 require_once("../../../classes/PrintJson.php");
 require_once("../classes/ProductBrand.php");
 //require_once("../classes/ProductCategory.php");
-include("../../sessions/session.php");
+//include("../../sessions/session.php");
 
 header("Content-Type: application/json");
 
@@ -23,7 +23,8 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 
 if (isset($_REQUEST['categoryId']) && !empty(trim($_REQUEST['categoryId']))) {
     $brandName = new ProductBrand($dbConnect->getInstance());
-    $getBrandName = $brandName->getProductBrand($_REQUEST['categoryId'], $_SESSION['companyId']);
+//    $getBrandName = $brandName->getProductBrand($_REQUEST['categoryId'], $_SESSION['companyId']);
+    $getBrandName = $brandName->getProductBrand($_REQUEST['categoryId'], 1);
 
     $data = array();
     $productBrand = array();

@@ -12,7 +12,7 @@ require_once("../../../classes/PrintJson.php");
 require_once("../classes/ProductBrand.php");
 require_once("../classes/ProductCategory.php");
 require_once("../classes/ProductsDetails.php");
-include("../../sessions/session.php");
+//include("../../sessions/session.php");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_USERNAME,
@@ -25,14 +25,16 @@ $productBrand = new ProductBrand($dbConnect->getInstance());
 $productDetails = new ProductsDetails($dbConnect->getInstance());
 
 //Get categories
-$getProductCategory = $productCategory->getProductCategory($_SESSION['companyId']);
+//$getProductCategory = $productCategory->getProductCategory($_SESSION['companyId']);
+$getProductCategory = $productCategory->getProductCategory(1);
 if ($getProductCategory != false) {
 while ($rowCategory = $getProductCategory->fetch_assoc()) {
 $productCategoryId = $rowCategory['product_category_id'];
 echo "<b>" . $rowCategory['product_category_name'] . "</b><br>";
 
 //Get brand with its respective categories
-$getProductBrand = $productBrand->getProductBrand($productCategoryId, $_SESSION['companyId']);
+//$getProductBrand = $productBrand->getProductBrand($productCategoryId, $_SESSION['companyId']);
+$getProductBrand = $productBrand->getProductBrand($productCategoryId, 1);
 if ($getProductBrand != false) {
 $i = 1;
 while ($rowBrand = $getProductBrand->fetch_assoc()) {
@@ -40,7 +42,8 @@ $productBrandId = $rowBrand['product_brand_id'];
 echo "<br><b>-></b>" . $rowBrand['product_brand_name'] . "<br>";
 
 //Get products with its respective brand and categories
-$getProductDetails = $productDetails->getProductDetails($productCategoryId, $productBrandId, 0, $_SESSION['companyId']);
+//$getProductDetails = $productDetails->getProductDetails($productCategoryId, $productBrandId, 0, $_SESSION['companyId']);
+$getProductDetails = $productDetails->getProductDetails($productCategoryId, $productBrandId, 0, 1);
 if ($getProductDetails != false) {
 ?>
 
