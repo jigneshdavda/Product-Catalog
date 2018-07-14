@@ -88,8 +88,8 @@ if (!isset($_SESSION['companyId']) || !isset($_SESSION['phone'])
                                          class="img-circle" alt="User Image">
 
                                     <p>
-                                        Product Catalog
-                                        <small>Since July 2018</small>
+                                        Product Ca
+                                        <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -146,9 +146,6 @@ if (!isset($_SESSION['companyId']) || !isset($_SESSION['phone'])
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>Dashboard</h1>
-                <ol class="breadcrumb">
-
-                </ol>
             </section>
 
             <!-- Main content -->

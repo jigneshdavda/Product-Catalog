@@ -1,3 +1,10 @@
+.table-container1{
+    width: 100%;
+    overflow-y: auto;
+    overflow: auto;
+    margin:0 0 1em;
+}
+
 /*!
  *   AdminLTE v2.4.0
  *   Author: Almsaeed Studio
