@@ -21,7 +21,7 @@ if (isset($_SESSION['companyId']) && isset($_SESSION['phone'])
         <script type="text/javascript" src="../../../Resources/jquery-3.2.1.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Product Catalog | Sign In</title>
+        <title>Sign In | Product Catalog</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
@@ -55,7 +55,7 @@ if (isset($_SESSION['companyId']) && isset($_SESSION['phone'])
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <h3 class="login-box-msg ">Sign in</h3>
+            <h4 class="login-box-msg ">Sign in</h4>
 
 
             <form>
