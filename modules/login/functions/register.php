@@ -6,12 +6,16 @@
     <title>Registration Page | Product Catalog</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- jQuery 3 -->
+    <script src="../../../Resources/AdminLTE-2.4.2/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Select2 -->
     <link rel="stylesheet" href=../../../Resources/AdminLTE-2.4.2/bower_components/select2/dist/css/select2.min.css">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="../../../Resources/AdminLTE-2.4.2/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="../../../Resources/AdminLTE-2.4.2/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../../Resources/AdminLTE-2.4.2/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="../../../Resources/AdminLTE-2.4.2/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="../../../Resources/AdminLTE-2.4.2/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
@@ -28,7 +32,8 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
@@ -40,25 +45,27 @@
         <h4 class="login-box-msg">Register a new membership</h4>
         <form id="register_form">
             <div class="form-group has-feedback">
-            <input class="form-control" type="text" id="company_name" placeholder="Enter Company Name">
+                <input class="form-control" type="text" id="company_name" placeholder="Enter Company Name">
             </div>
             <div class="form-group has-feedback">
-            <input class="form-control" type="email" id="company_email_id" placeholder="Enter Email id">
+                <input class="form-control" type="email" id="company_email_id" placeholder="Enter Email id">
             </div>
             <div class="form-group has-feedback">
-            <input class="form-control" type="number" id="company_phone_number" placeholder="Enter Phone Number">
+                <input class="form-control" type="number" id="company_phone_number" placeholder="Enter Phone Number">
             </div>
             <div class="form-group has-feedback">
-            <textarea class="form-control" id="company_address_line_1" placeholder="Enter Address Line 1"></textarea>
+                <textarea class="form-control" id="company_address_line_1"
+                          placeholder="Enter Address Line 1"></textarea>
             </div>
             <div class="form-group has-feedback">
-            <textarea class="form-control" id="company_address_line_2" placeholder="Enter Address Line 2"></textarea>
+                <textarea class="form-control" id="company_address_line_2"
+                          placeholder="Enter Address Line 2"></textarea>
             </div>
             <div class="form-group has-feedback">
                 <label>Company Location:</label>
 
                 <select class="form-control select2" style="width: 100%" id="company_country">
-                    <option  selected="selected">Select Country</option>
+                    <option selected="selected">Select Country</option>
                     <option value="Afghanistan" title="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands" title="Åland Islands">Åland Islands</option>
                     <option value="Albania" title="Albania">Albania</option>
@@ -89,14 +96,17 @@
                         Plurinational
                         State of
                     </option>
-                    <option value="Bonaire, Sint Eustatius and Saba" title="Bonaire, Sint Eustatius and Saba">Bonaire, Sint
+                    <option value="Bonaire, Sint Eustatius and Saba" title="Bonaire, Sint Eustatius and Saba">Bonaire,
+                        Sint
                         Eustatius and Saba
                     </option>
-                    <option value="Bosnia and Herzegovina" title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Bosnia and Herzegovina" title="Bosnia and Herzegovina">Bosnia and Herzegovina
+                    </option>
                     <option value="Botswana" title="Botswana">Botswana</option>
                     <option value="Bouvet Island" title="Bouvet Island">Bouvet Island</option>
                     <option value="Brazil" title="Brazil">Brazil</option>
-                    <option value="British Indian Ocean Territory" title="British Indian Ocean Territory">British Indian Ocean
+                    <option value="British Indian Ocean Territory" title="British Indian Ocean Territory">British Indian
+                        Ocean
                         Territory
                     </option>
                     <option value="Brunei Darussalam" title="Brunei Darussalam">Brunei Darussalam</option>
@@ -108,16 +118,19 @@
                     <option value="Canada" title="Canada">Canada</option>
                     <option value="Cape Verde" title="Cape Verde">Cape Verde</option>
                     <option value="Cayman Islands" title="Cayman Islands">Cayman Islands</option>
-                    <option value="Central African Republic" title="Central African Republic">Central African Republic</option>
+                    <option value="Central African Republic" title="Central African Republic">Central African Republic
+                    </option>
                     <option value="Chad" title="Chad">Chad</option>
                     <option value="Chile" title="Chile">Chile</option>
                     <option value="China" title="China">China</option>
                     <option value="Christmas Island" title="Christmas Island">Christmas Island</option>
-                    <option value="Cocos (Keeling) Islands" title="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Cocos (Keeling) Islands" title="Cocos (Keeling) Islands">Cocos (Keeling) Islands
+                    </option>
                     <option value="Colombia" title="Colombia">Colombia</option>
                     <option value="Comoros" title="Comoros">Comoros</option>
                     <option value="Congo" title="Congo">Congo</option>
-                    <option value="Congo, the Democratic Republic of the" title="Congo, the Democratic Republic of the">Congo,
+                    <option value="Congo, the Democratic Republic of the" title="Congo, the Democratic Republic of the">
+                        Congo,
                         the
                         Democratic Republic of the
                     </option>
@@ -140,7 +153,8 @@
                     <option value="Eritrea" title="Eritrea">Eritrea</option>
                     <option value="Estonia" title="Estonia">Estonia</option>
                     <option value="Ethiopia" title="Ethiopia">Ethiopia</option>
-                    <option value="Falkland Islands (Malvinas)" title="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)
+                    <option value="Falkland Islands (Malvinas)" title="Falkland Islands (Malvinas)">Falkland Islands
+                        (Malvinas)
                     </option>
                     <option value="Faroe Islands" title="Faroe Islands">Faroe Islands</option>
                     <option value="Fiji" title="Fiji">Fiji</option>
@@ -148,7 +162,8 @@
                     <option value="France" title="France">France</option>
                     <option value="French Guiana" title="French Guiana">French Guiana</option>
                     <option value="French Polynesia" title="French Polynesia">French Polynesia</option>
-                    <option value="French Southern Territories" title="French Southern Territories">French Southern Territories
+                    <option value="French Southern Territories" title="French Southern Territories">French Southern
+                        Territories
                     </option>
                     <option value="Gabon" title="Gabon">Gabon</option>
                     <option value="Gambia" title="Gambia">Gambia</option>
@@ -167,10 +182,12 @@
                     <option value="Guinea-Bissau" title="Guinea-Bissau">Guinea-Bissau</option>
                     <option value="Guyana" title="Guyana">Guyana</option>
                     <option value="Haiti" title="Haiti">Haiti</option>
-                    <option value="Heard Island and McDonald Islands" title="Heard Island and McDonald Islands">Heard Island and
+                    <option value="Heard Island and McDonald Islands" title="Heard Island and McDonald Islands">Heard
+                        Island and
                         McDonald Islands
                     </option>
-                    <option value="Holy See (Vatican City State)" title="Holy See (Vatican City State)">Holy See (Vatican City
+                    <option value="Holy See (Vatican City State)" title="Holy See (Vatican City State)">Holy See
+                        (Vatican City
                         State)
                     </option>
                     <option value="Honduras" title="Honduras">Honduras</option>
@@ -179,7 +196,8 @@
                     <option value="Iceland" title="Iceland">Iceland</option>
                     <option value="India" title="India">India</option>
                     <option value="Indonesia" title="Indonesia">Indonesia</option>
-                    <option value="Iran, Islamic Republic of" title="Iran, Islamic Republic of">Iran, Islamic Republic of
+                    <option value="Iran, Islamic Republic of" title="Iran, Islamic Republic of">Iran, Islamic Republic
+                        of
                     </option>
                     <option value="Iraq" title="Iraq">Iraq</option>
                     <option value="Ireland" title="Ireland">Ireland</option>
@@ -193,13 +211,15 @@
                     <option value="Kazakhstan" title="Kazakhstan">Kazakhstan</option>
                     <option value="Kenya" title="Kenya">Kenya</option>
                     <option value="Kiribati" title="Kiribati">Kiribati</option>
-                    <option value="Korea, Democratic People's Republic of" title="Korea, Democratic People's Republic of">Korea,
+                    <option value="Korea, Democratic People's Republic of"
+                            title="Korea, Democratic People's Republic of">Korea,
                         Democratic People's Republic of
                     </option>
                     <option value="Korea, Republic of" title="Korea, Republic of">Korea, Republic of</option>
                     <option value="Kuwait" title="Kuwait">Kuwait</option>
                     <option value="Kyrgyzstan" title="Kyrgyzstan">Kyrgyzstan</option>
-                    <option value="Lao People's Democratic Republic" title="Lao People's Democratic Republic">Lao People's
+                    <option value="Lao People's Democratic Republic" title="Lao People's Democratic Republic">Lao
+                        People's
                         Democratic Republic
                     </option>
                     <option value="Latvia" title="Latvia">Latvia</option>
@@ -250,7 +270,8 @@
                     <option value="Nigeria" title="Nigeria">Nigeria</option>
                     <option value="Niue" title="Niue">Niue</option>
                     <option value="Norfolk Island" title="Norfolk Island">Norfolk Island</option>
-                    <option value="Northern Mariana Islands" title="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option value="Northern Mariana Islands" title="Northern Mariana Islands">Northern Mariana Islands
+                    </option>
                     <option value="Norway" title="Norway">Norway</option>
                     <option value="Oman" title="Oman">Oman</option>
                     <option value="Pakistan" title="Pakistan">Pakistan</option>
@@ -275,15 +296,19 @@
                     <option value="Rwanda" title="Rwanda">Rwanda</option>
                     <option value="Saint Barthélemy" title="Saint Barthélemy">Saint Barthélemy</option>
                     <option value="Saint Helena, Ascension and Tristan da Cunha"
-                            title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha
+                            title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da
+                        Cunha
                     </option>
                     <option value="Saint Kitts and Nevis" title="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                     <option value="Saint Lucia" title="Saint Lucia">Saint Lucia</option>
-                    <option value="Saint Martin (French part)" title="Saint Martin (French part)">Saint Martin (French part)
+                    <option value="Saint Martin (French part)" title="Saint Martin (French part)">Saint Martin (French
+                        part)
                     </option>
-                    <option value="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                    <option value="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon">Saint Pierre and
+                        Miquelon
                     </option>
-                    <option value="Saint Vincent and the Grenadines" title="Saint Vincent and the Grenadines">Saint Vincent and
+                    <option value="Saint Vincent and the Grenadines" title="Saint Vincent and the Grenadines">Saint
+                        Vincent and
                         the
                         Grenadines
                     </option>
@@ -296,7 +321,8 @@
                     <option value="Seychelles" title="Seychelles">Seychelles</option>
                     <option value="Sierra Leone" title="Sierra Leone">Sierra Leone</option>
                     <option value="Singapore" title="Singapore">Singapore</option>
-                    <option value="Sint Maarten (Dutch part)" title="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)
+                    <option value="Sint Maarten (Dutch part)" title="Sint Maarten (Dutch part)">Sint Maarten (Dutch
+                        part)
                     </option>
                     <option value="Slovakia" title="Slovakia">Slovakia</option>
                     <option value="Slovenia" title="Slovenia">Slovenia</option>
@@ -304,22 +330,26 @@
                     <option value="Somalia" title="Somalia">Somalia</option>
                     <option value="South Africa" title="South Africa">South Africa</option>
                     <option value="South Georgia and the South Sandwich Islands"
-                            title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands
+                            title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich
+                        Islands
                     </option>
                     <option value="South Sudan" title="South Sudan">South Sudan</option>
                     <option value="Spain" title="Spain">Spain</option>
                     <option value="Sri Lanka" title="Sri Lanka">Sri Lanka</option>
                     <option value="Sudan" title="Sudan">Sudan</option>
                     <option value="Suriname" title="Suriname">Suriname</option>
-                    <option value="Svalbard and Jan Mayen" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option value="Svalbard and Jan Mayen" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen
+                    </option>
                     <option value="Swaziland" title="Swaziland">Swaziland</option>
                     <option value="Sweden" title="Sweden">Sweden</option>
                     <option value="Switzerland" title="Switzerland">Switzerland</option>
                     <option value="Syrian Arab Republic" title="Syrian Arab Republic">Syrian Arab Republic</option>
-                    <option value="Taiwan, Province of China" title="Taiwan, Province of China">Taiwan, Province of China
+                    <option value="Taiwan, Province of China" title="Taiwan, Province of China">Taiwan, Province of
+                        China
                     </option>
                     <option value="Tajikistan" title="Tajikistan">Tajikistan</option>
-                    <option value="Tanzania, United Republic of" title="Tanzania, United Republic of">Tanzania, United Republic
+                    <option value="Tanzania, United Republic of" title="Tanzania, United Republic of">Tanzania, United
+                        Republic
                         of
                     </option>
                     <option value="Thailand" title="Thailand">Thailand</option>
@@ -331,25 +361,29 @@
                     <option value="Tunisia" title="Tunisia">Tunisia</option>
                     <option value="Turkey" title="Turkey">Turkey</option>
                     <option value="Turkmenistan" title="Turkmenistan">Turkmenistan</option>
-                    <option value="Turks and Caicos Islands" title="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Turks and Caicos Islands" title="Turks and Caicos Islands">Turks and Caicos Islands
+                    </option>
                     <option value="Tuvalu" title="Tuvalu">Tuvalu</option>
                     <option value="Uganda" title="Uganda">Uganda</option>
                     <option value="Ukraine" title="Ukraine">Ukraine</option>
                     <option value="United Arab Emirates" title="United Arab Emirates">United Arab Emirates</option>
                     <option value="United Kingdom" title="United Kingdom">United Kingdom</option>
                     <option value="United States" title="United States">United States</option>
-                    <option value="United States Minor Outlying Islands" title="United States Minor Outlying Islands">United
+                    <option value="United States Minor Outlying Islands" title="United States Minor Outlying Islands">
+                        United
                         States
                         Minor Outlying Islands
                     </option>
                     <option value="Uruguay" title="Uruguay">Uruguay</option>
                     <option value="Uzbekistan" title="Uzbekistan">Uzbekistan</option>
                     <option value="Vanuatu" title="Vanuatu">Vanuatu</option>
-                    <option value="Venezuela, Bolivarian Republic of" title="Venezuela, Bolivarian Republic of">Venezuela,
+                    <option value="Venezuela, Bolivarian Republic of" title="Venezuela, Bolivarian Republic of">
+                        Venezuela,
                         Bolivarian Republic of
                     </option>
                     <option value="Viet Nam" title="Viet Nam">Viet Nam</option>
-                    <option value="Virgin Islands, British" title="Virgin Islands, British">Virgin Islands, British</option>
+                    <option value="Virgin Islands, British" title="Virgin Islands, British">Virgin Islands, British
+                    </option>
                     <option value="Virgin Islands, U.S." title="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
                     <option value="Wallis and Futuna" title="Wallis and Futuna">Wallis and Futuna</option>
                     <option value="Western Sahara" title="Western Sahara">Western Sahara</option>
@@ -359,18 +393,20 @@
                 </select>
             </div>
             <div class="form-group has-feedback">
-            <input class="form-control" type="password" id="company_password" placeholder="Password">
+                <input class="form-control" type="password" id="company_password" placeholder="Password">
             </div>
             <div class="form-group has-feedback">
                 <input class="form-control" type="password" id="company_retype_password" placeholder="Re-type Password">
             </div>
             <div class="row">
-            <div class="form-group has-feedback col-xs-6">
-            <button class="btn btn-primary btn-block btn-flat" type="reset" value="reset">Reset</button>
-            </div>
-            <div class="form-group has-feedback col-xs-6">
-            <button class="btn btn-primary btn-block btn-flat" type="submit" id="submit_form" value="register">Register</button>
-            </div>
+                <div class="form-group has-feedback col-xs-6">
+                    <button class="btn btn-primary btn-block btn-flat" type="reset" value="reset">Reset</button>
+                </div>
+                <div class="form-group has-feedback col-xs-6">
+                    <button class="btn btn-primary btn-block btn-flat" type="submit" id="submit_form" value="register">
+                        Register
+                    </button>
+                </div>
             </div>
             <br>
             <a href="login.php">I already have a membership</a>
@@ -432,8 +468,6 @@
 </div>
 <!-- /.register-box -->
 
-<!-- jQuery 3 -->
-<script src="../../../Resources/AdminLTE-2.4.2/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../../Resources/AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->

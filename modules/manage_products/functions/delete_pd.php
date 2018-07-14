@@ -10,7 +10,7 @@ require_once("../../../classes/DBConnect.php");
 require_once("../../../classes/Constants.php");
 require_once("../../../classes/PrintJson.php");
 require_once("../classes/ProductsDetails.php");
-//include("../../sessions/session.php");
+include("../../sessions/session.php");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_USERNAME,
@@ -19,8 +19,8 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 
 if (isset($_REQUEST['deleteProductDetailsId']) && !empty(trim($_REQUEST['deleteProductDetailsId']))) {
     $productDetails = new ProductsDetails($dbConnect->getInstance());
-//    $deleteProductDetails = $productDetails->deleteProductDetails($_REQUEST['deleteProductDetailsId'], $_SESSION['companyId']);
-    $deleteProductDetails = $productDetails->deleteProductDetails($_REQUEST['deleteProductDetailsId'], 1);
+    $deleteProductDetails = $productDetails->deleteProductDetails($_REQUEST['deleteProductDetailsId'], $_SESSION['companyId']);
+//    $deleteProductDetails = $productDetails->deleteProductDetails($_REQUEST['deleteProductDetailsId'], 1);
 
     if ($deleteProductDetails === true) {
         new PrintJson(Constants::STATUS_SUCCESS, "Successfully deleted");

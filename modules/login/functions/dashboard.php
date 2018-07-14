@@ -8,13 +8,13 @@
 
 session_start();
 
-//if (!isset($_SESSION['companyId']) || !isset($_SESSION['phone'])
-//    || empty(trim($_SESSION['companyId'])) || empty(trim($_SESSION['phone']))) {
-//    echo "<script>alert('Please login first!');window.location.replace('login.php');</script>";
-//} else {
-////    echo $_SESSION['companyId'] . "<br>";
-////    echo $_SESSION['phone'];
-//    ?>
+if (!isset($_SESSION['companyId']) || !isset($_SESSION['phone'])
+    || empty(trim($_SESSION['companyId'])) || empty(trim($_SESSION['phone']))) {
+    echo "<script>alert('Please login first!');window.location.replace('login.php');</script>";
+} else {
+//    echo $_SESSION['companyId'] . "<br>";
+//    echo $_SESSION['phone'];
+    ?>
     <html>
     <head>
         <title>Dashboard | Product Catalog</title>
@@ -29,6 +29,6 @@ session_start();
     <a href="logout.php" type="button">Log out</a>
     </body>
     </html>
-<!--    --><?php
-//}
-//?>
+    <?php
+}
+?>

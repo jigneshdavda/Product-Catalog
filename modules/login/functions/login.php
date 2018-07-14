@@ -51,7 +51,7 @@ if (isset($_SESSION['companyId']) && isset($_SESSION['phone'])
     <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Product </b>Catalog</a>
+            <a href="#"><b>Product </b>Catalog</a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">

@@ -18,7 +18,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_PASSWORD,
     Constants::DB_NAME);
 
-session_start();
+//session_start();
 
 //if (isset($_SESSION['phoneNumber'])) {
 

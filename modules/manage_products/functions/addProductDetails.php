@@ -15,7 +15,7 @@ require_once("../classes/ProductBrandWarranty.php");
 require_once("../classes/ProductCategory.php");
 require_once("../classes/ProductCondition.php");
 require_once("../classes/ProductsDetails.php");
-//include("../../sessions/session.php");
+include("../../sessions/session.php");
 
 $dbConnect = new DBConnect(Constants::SERVER_NAME,
     Constants::DB_USERNAME,
@@ -25,27 +25,27 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 $i = 1;
 
 $boxType = new ProductBoxType($dbConnect->getInstance());
-//$getBoxType = $boxType->getProductBoxType($_SESSION['companyId']);
-$getBoxType = $boxType->getProductBoxType(1);
+$getBoxType = $boxType->getProductBoxType($_SESSION['companyId']);
+//$getBoxType = $boxType->getProductBoxType(1);
 
 //$brand = new ProductBrand($dbConnect->getInstance());
 //$getBrand = $brand->getProductBrand();
 
 $brandWarranty = new ProductBrandWarranty($dbConnect->getInstance());
-//$getBrandWarranty = $brandWarranty->getProductBrandWarranty($_SESSION['companyId']);
-$getBrandWarranty = $brandWarranty->getProductBrandWarranty(1);
+$getBrandWarranty = $brandWarranty->getProductBrandWarranty($_SESSION['companyId']);
+//$getBrandWarranty = $brandWarranty->getProductBrandWarranty(1);
 
 $category = new ProductCategory($dbConnect->getInstance());
-//$getCategory = $category->getProductCategory($_SESSION['companyId']);
-$getCategory = $category->getProductCategory(1);
+$getCategory = $category->getProductCategory($_SESSION['companyId']);
+//$getCategory = $category->getProductCategory(1);
 
 $condition = new ProductCondition($dbConnect->getInstance());
-//$getCondition = $condition->getProductCondition($_SESSION['companyId']);
-$getCondition = $condition->getProductCondition(1);
+$getCondition = $condition->getProductCondition($_SESSION['companyId']);
+//$getCondition = $condition->getProductCondition(1);
 
 $details = new ProductsDetails($dbConnect->getInstance());
-//$getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']);
-$getProductDetails = $details->getProductDetails(0, 0, 0, 1);
+$getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']);
+//$getProductDetails = $details->getProductDetails(0, 0, 0, 1);
 ?>
 
 <html>
