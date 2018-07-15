@@ -203,7 +203,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
             <h1>Add Product Details</h1>
             <ol class="breadcrumb">
                 <li><a href="../../login/functions/dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                <li class="active">Add Product Details</li>
+                <li class="active"><i class="fa fa-plus"></i> Add Product Details</li>
             </ol>
         </section>
 

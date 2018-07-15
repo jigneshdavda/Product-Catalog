@@ -174,7 +174,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
             <h1>Delete Product Details</h1>
             <ol class="breadcrumb">
                 <li><a href="../../login/functions/dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                <li class="active">Delete Product Details</li>
+                <li class="active"><i class="fa fa-trash"></i> Delete Product Details</li>
             </ol>
         </section>
         <!-- Main content -->
@@ -196,12 +196,17 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 
             echo '<div class="row">
                 <div class="col-xs-12">
-                    <div class="box">';
+                    <div class="box box-default collapsed-box">';
 
 
             $productCategoryId = $rowCategory['product_category_id'];
             echo "<div class=\"box-header with-border\">
+<div class=\"box-tools pull-right\">
+                <button type=\"button\" class=\"btn btn-box-tool\" data-widget=\"collapse\"><i class=\"fa fa-plus\"></i>
+                </button>
+              </div>
                             <h2 class=\"box-title\">" . $rowCategory['product_category_name'] . "</h2></div>
+                            
             <div class=\"box-body\">";
 
             //Get brand with its respective categories
@@ -237,6 +242,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
                         <th>Company Price</th>
                     </tr>
                     </thead>
+
                     <?php
                     $numRows = $getProductDetails->num_rows;
                     $j = 0;
@@ -268,14 +274,12 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
                         $j++;
                     }
                     echo "</table></div></div><br>";
-                    //                                    echo "<br>";
                     } else {
-                        echo "No Product</div><br>";
+                        echo "<label>No Products Available</label></div><br>";
                     }
                     }
-                    //                                    echo "<br>";
                     } else {
-                        echo "No Brand under this category";
+                        echo "<label>No Brand under this category</label>";
                     }
 
                     echo '</div>
@@ -286,7 +290,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 
                     }
                     } else {
-                        echo "No category found";
+                        echo "<label>No Category Available</label>";
                     }
 
                     ?>
