@@ -203,7 +203,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
             echo "<div class=\"box-header with-border\">
 <div class=\"box-tools pull-right\">
                 <button type=\"button\" class=\"btn btn-box-tool\" data-widget=\"collapse\"><i class=\"fa fa-plus\"></i>
-                </button>
+                </button>   
               </div>
                             <h2 class=\"box-title\">" . $rowCategory['product_category_name'] . "</h2></div>
                             
