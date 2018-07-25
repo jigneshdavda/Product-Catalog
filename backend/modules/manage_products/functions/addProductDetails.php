@@ -135,7 +135,8 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="../../login/functions/logout.php" type="button" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="../../login/functions/logout.php" type="button"
+                                       class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -256,7 +257,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                             }
                                             echo "</select></td>";
 
-                                            echo "<td><select class='productBrand form-control select2" . $i . "' style='width:auto' id='productBrand" . $i . "' name='productBrand" . $i . "'>
+                                            echo "<td><select class='productBrand" . $i . " form-control select2' style='width:auto' id='productBrand" . $i . "' name='productBrand" . $i . "'>
                                 <option value='-1' selected disabled>Select Brand</option>";
                                             //            if ($getBrand == true) {
                                             //                while ($row = $getBrand->fetch_assoc()) {
@@ -353,7 +354,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                                     var newRow = '<tr custom = "' + counter + '" id="row' + counter + '"><td>' + counter + '</td>';
 
                                                     //Drop Down Product Category
-                                                    newRow = newRow + '<td><select class="productCategory form-control select2' + counter + '" style="width:auto" id="productCategory' + counter + '" name="productCategory"' + counter + '>';
+                                                    newRow = newRow + '<td><select class="productCategory' + counter + ' form-control select2" style="width:auto" id="productCategory' + counter + '" name="productCategory"' + counter + '>';
                                                     newRow = newRow + '<option value="-5" selected disabled>Select Category</option>';
                                                     for (var a = 0; a < json.message[0].product_category.length; a++) {
                                                         newRow = newRow + '<option value="' + json.message[0].product_category[a].id + '">' + json.message[0].product_category[a].name + '</option>';
@@ -361,7 +362,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                                     newRow = newRow + '</select></td>';
 
                                                     //Drop Down Product Brand
-                                                    newRow = newRow + '<td><select class="productBrand form-control select2' + counter + '"style="width: auto;" id="productBrand' + counter + '" name="productBrand"' + counter + '>';
+                                                    newRow = newRow + '<td><select class="productBrand' + counter + ' form-control select2" style="width: auto;" id="productBrand' + counter + '" name="productBrand"' + counter + '>';
                                                     newRow = newRow + '<option value="-5" selected disabled>Select Brand</option>';
 //                        for (var i = 0; i < json.message[1].product_brand.length; i++) {
 //                            newRow = newRow + '<option value="' + json.message[1].product_brand[i].id + '">' + json.message[1].product_brand[i].name + '</option>';
@@ -403,15 +404,15 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                                         '<td><input class="form-control" type="number" id="productMFGPrice' + counter + '" name="productMFGPrice' + counter + '" placeholder="Enter MFG. Price">' +
                                                         '</td><td><input class="form-control" type="number" id="productCompanyPrice' + counter + '" name="productCompanyPrice' + counter + '" placeholder="Enter Company Price"></td>' +
                                                         '<td><button class=\'btn btn-danger btn-flat\' type="button" id="deleteRow" value="' + counter + '"><i class=\'glyphicon glyphicon-remove\'></i> Remove</button></td>' +
-                                                        '<td><input class="form-control" type="hidden" class="rowValue" value="' + counter + '"></td></tr>';
+                                                        '<input type="hidden" class="rowValue" id="' + counter + '" name="rowValue" value="' + counter + '"></tr>';
                                                     $('#mainTable').append(newRow);
 
                                                     $('#mainTable').on("change", 'select.productCategory' + counter, function (e) {
                                                         var categoryId = $(this).find('option:selected').val();
                                                         var rowCount = $(this).parents("tr").attr('custom');
 
-//                            console.log("Category id: " + categoryId);
-//                            console.log("Row value: " + rowCount);
+//                                                        console.log("Category id: " + categoryId);
+//                                                        console.log("Row value: " + rowCount);
 
                                                         getDynamicProductCategory(categoryId, rowCount);
                                                     });
@@ -449,8 +450,8 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                         e.preventDefault();
                                         var categoryId = $(".productCategory option:selected").val();
                                         var rowCountValue = $(".rowValue").val();
-//            console.log("Category id: " + categoryId);
-//            console.log("Row value: " + rowCountValue);
+//                                        console.log("Category id: " + categoryId);
+//                                        console.log("Row value: " + rowCountValue);
 
                                         getDynamicProductCategory(categoryId, rowCountValue);
                                     });
@@ -502,6 +503,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                     function addToDatabase() {
                                         $(".rowValue").each(function () {
                                             var rowId = $(this).val();
+                                            //console.log(rowId);
 
                                             productCategory = $("#productCategory" + rowId).find("option:selected").val();
                                             productBrand = $("#productBrand" + rowId).find("option:selected").val();
@@ -521,7 +523,7 @@ $getProductDetails = $details->getProductDetails(0, 0, 0, $_SESSION['companyId']
                                                 productComment, productQuantity, productMFGPrice, productCompanyPrice]);
                                         });
 
-//            console.log(arrayAddToDB);
+                                        //console.log(arrayAddToDB);
 
                                         if (productCategory === "" || productBrand === "" || productModelName === "" || productModelColor === "" ||
                                             productCondition === "" || productBoxType === "" || productBrandWarranty === "" || productWarrantyExpiry === "" ||

@@ -262,7 +262,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
                         echo "<td>" . $rowProduct['product_details_mfg_price'] . "</td>";
                         echo "<td>" . $rowProduct['product_details_company_price'] . "</td>";
                         echo "<input type='hidden' id='productDetailsId' value='" . $productDetailsId . "'>";
-                        echo "<td><button class='btn btn-flat btn-danger' type='submit' class='deleteProduct'><i class='fa fa-trash'></i> Delete Product</button></td>";
+                        echo "<td><button class='btn btn-flat btn-danger deleteProduct' type='submit'><i class='fa fa-trash'></i> Delete Product</button></td>";
                         echo "</tr>";
 
                         if ($j == ($numRows - 1)) {
@@ -287,7 +287,6 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
 </div>
 </div>';
 
-
                     }
                     } else {
                         echo "<label>No Category Available</label>";
@@ -301,7 +300,7 @@ $dbConnect = new DBConnect(Constants::SERVER_NAME,
                                 e.preventDefault();
                                 var deleteProductId = $(this).closest("tr").find("#productDetailsId").val();
 
-//                console.log(deleteProductId);
+                                //console.log(deleteProductId);
 
                                 if (deleteProductId > 0) {
 
